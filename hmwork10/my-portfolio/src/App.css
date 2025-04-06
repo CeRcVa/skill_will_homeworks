@@ -1,0 +1,11 @@
+.portfolio {
+  text-align: center;
+  padding: 20px;
+}
+
+.profile-pic {
+  width: 260px;
+  height: 270px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
