@@ -1,4 +1,5 @@
 import TaskItem from "./TaskItem";
+import React from "react";
 
 function TaskList({ title, tasks, onComplete, onDelete, onReturn }) {
   return (
@@ -21,4 +22,4 @@ function TaskList({ title, tasks, onComplete, onDelete, onReturn }) {
   );
 }
 
-export default TaskList;
+export default React.memo(TaskList);

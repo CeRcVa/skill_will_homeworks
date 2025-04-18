@@ -14,7 +14,7 @@ function TaskInput({ addTask }) {
     <form onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="ახალი დავალება"
+        placeholder="ახალი დავალება..."
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
