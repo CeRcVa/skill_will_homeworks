@@ -1,0 +1,23 @@
+body.light {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: #121212;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.app {
+  text-align: center;
+  padding: 2rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
