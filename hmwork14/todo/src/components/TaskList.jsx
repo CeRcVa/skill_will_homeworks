@@ -1,10 +1,10 @@
 import TaskItem from "./TaskItem";
 import React from "react";
 
-function TaskList({ title, tasks, onComplete, onDelete, onReturn }) {
+function TaskList({ title, tasks, onComplete, onDelete, onReturn, onStartProgress }) {
   return (
     <div className="task-list">
-      <h2>{title}</h2>
+      <h2>{title} | {tasks.length}</h2>
       {tasks.length === 0 ? (
         <p>დავალებები არ არის</p>
       ) : (
@@ -15,6 +15,7 @@ function TaskList({ title, tasks, onComplete, onDelete, onReturn }) {
             onComplete={onComplete}
             onDelete={onDelete}
             onReturn={onReturn}
+            onStartProgress={onStartProgress}
           />
         ))
       )}

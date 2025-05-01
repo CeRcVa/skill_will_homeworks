@@ -1,29 +1,22 @@
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 
 function TaskInput({ addTask }) {
-  const [text, setText] = useState("");
-  const inputRef = useRef();
-
-  useEffect(() => {
-    inputRef.current.focus();
-  }, []);
+  const [input, setInput] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!text.trim()) return;
-    addTask(text.trim());
-    setText("");
-    inputRef.current.focus();
+    if (!input.trim()) return;
+    addTask(input);
+    setInput("");
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="task-input">
       <input
-        ref={inputRef}
         type="text"
-        placeholder="ახალი დავალება..."
-        value={text}
-        onChange={(e) => setText(e.target.value)}
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        placeholder="დავალების შეყვანა"
       />
       <button type="submit">დამატება</button>
     </form>
